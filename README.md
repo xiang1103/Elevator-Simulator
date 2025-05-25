@@ -4,11 +4,11 @@ Simulating an elevator in Python and implement my version of the algorithm to pi
 ## Process 
 - The elevator object is the main object for carrying and going through 
 - The floors are made of floor objects which can call the elvator 
-- The user side to actually interact with the elevator 
+- The user side to actually interact with the elevator, which would be implemented in the main file 
 
 
 ## To-Dos  
-- [ ] floor object 
-- [ ] elevator object 
+- [x] floor object 
+- [x] elevator object 
 - [ ] implement the loading and offloading on the elevator algorithm
 - [ ] implement floor selection to go to algorithm 

@@ -25,6 +25,20 @@ class Elevator():
     def __str__(self):
         return f"Elevator in {self.status}. Total num floors: {self.num_floor}"
 
+    def drop_off(self): 
+        '''  
+        pick up the floors that require pick up 
+        '''
+        for floor in self.floors: 
+            if (floor.up): 
+                floor.up= False 
+                floor.set_status() 
+    
+    def pick_up(self): 
+        for floor in self.floors: 
+            if (floor.down): 
+                floor.down= False 
+                floor.set_status() 
 
 
 
