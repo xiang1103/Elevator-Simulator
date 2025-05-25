@@ -10,5 +10,5 @@ Simulating an elevator in Python and implement my version of the algorithm to pi
 ## To-Dos  
 - [x] floor object 
 - [x] elevator object 
-- [ ] implement the loading and offloading on the elevator algorithm
-- [ ] implement floor selection to go to algorithm 
+- [x] implement the loading and offloading on the elevator algorithm
+- [x] implement floor selection to go to algorithm 
