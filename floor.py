@@ -5,11 +5,15 @@ IDLE= "idle"    # floor did not make any calls
 AWAITING= "awaiting"    # awaiting elevator for pick up and drop off 
 
 class Floor(): 
-    def __init__(self): 
+    def __init__(self, num:int): 
         self.status= IDLE 
         self.up= False 
         self.down= False 
+        self.number= num 
 
+    def __str__(self):
+        return f"Floor: {self.number}"
+    
     
     def set_status(self):
         ''' 

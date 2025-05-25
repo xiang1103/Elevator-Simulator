@@ -1,4 +1,4 @@
-from enum import Enum 
+from floor import Floor
 
 # final variables for elevator status 
 UP= "up"
@@ -10,18 +10,29 @@ class Elevator():
         self.num_floor= num_floor # number of floors in this elevator 
         self.status= IDLE
         self.current_floor= -2  # default floor 
+        self.floors= self.make_floors() 
 
 
-    @classmethod 
-    def call_up(cls): 
+    def make_floors(self):
         ''' 
-        Call to go up in the elevator 
+        Make the floors as array of floors 
         '''
-        pass  
+        output= [] 
+        for i in range(0,self.num_floor): 
+            output.append(Floor(i))
+        return output 
 
-    @classmethod 
-    def call_down (cls):
-        ''' 
-        Call to come down in the elevator 
-        '''
-        pass 
+    def __str__(self):
+        return f"Elevator in {self.status}. Total num floors: {self.num_floor}"
+
+
+
+
+# testing 
+if __name__ == "__main__":
+    my_elev= Elevator(2) 
+    print(my_elev)
+    for floor in my_elev.floors: 
+        print(floor)
+
+    
